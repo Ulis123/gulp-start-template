@@ -4,19 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "gulp",
-    "build": "gulp prod --production"
+
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Ulis123/Gulp-start.git"
+    "url": "git+https://github.com/Ulis123/gulp-start-template.git"
   },
   "author": "Sergey Kalinichenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Ulis123/Gulp-start/issues"
+    "url": "https://github.com/Ulis123/gulp-start-template/issues"
   },
-  "homepage": "https://github.com/Ulis123/Gulp-start#readme",
+  "homepage": "https://github.com/Ulis123/gulp-start-template#readme",
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
