@@ -8,7 +8,6 @@ const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const csso = require('gulp-csso');
 const plumber = require('gulp-plumber');
-const notify = require("gulp-notify");
 const debug = require('gulp-debug');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
@@ -78,12 +77,7 @@ const serverConfig = () => gulp.src(paths.server_config.src)
 
 const html = () => gulp.src(paths.html.src)
     .pipe(rigger())
-    .pipe(plumber({
-        errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
-    .pipe(through(function () {
-        this.emit("error", new Error("Something happend: Error message!"))
-    }))
+    .pipe(plumber())
     .pipe(htmlmin({
         collapseWhitespace: true
     }))
@@ -95,12 +89,7 @@ const html = () => gulp.src(paths.html.src)
 
 const styles = () => gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
-    .pipe(plumber({
-        errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
-    .pipe(through(function () {
-        this.emit("error", new Error("Something happend: Error message!"))
-    }))
+    .pipe(plumber())
     .pipe(sass())
     .pipe(autoprefixer({
         browsers: ["last 12 versions", "> 1%", "ie 8", "ie 7"]
@@ -118,12 +107,7 @@ const styles = () => gulp.src(paths.styles.src)
 
 const scripts = () => gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
-    .pipe(plumber({
-        errorHandler: notify.onError("Error: <%= error.message %>")
-    }))
-    .pipe(through(function () {
-        this.emit("error", new Error("Something happend: Error message!"))
-    }))
+    .pipe(plumber())
     .pipe(babel({
         presets: ["@babel/preset-env"]
     }))
