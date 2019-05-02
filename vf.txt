@@ -1,0 +1,31 @@
+Settings Sync
+
+f77565e5925af3ff9997921d077c81a13d213c96 github token
+
+acc4584fef7b17dd2f0c383cf41126d4 gist ID
+
+https://fancyapps.com/fancybox/3/
+
+http://kenwheeler.github.io/slick/
+
+https://owlcarousel2.github.io/OwlCarousel2/
+
+https://transfonter.org/
+
+https://fontawesome.com/
+
+https://sass-scss.ru/
+
+https://getbootstrap.com/docs/4.0/layout/overview/
+
+https://gulpjs.com/
+
+http://jquery.page2page.ru/index.php5/Ajax
+
+https://api.jquery.com/
+
+http://cssgridgarden.com/#ru
+
+https://tpverstak.ru/flex-cheatsheet/
+
+http://flexboxfroggy.com/#ru
