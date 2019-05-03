@@ -1,8 +1,10 @@
 Settings Sync
 
-f77565e5925af3ff9997921d077c81a13d213c96 github token
+f77565e5925af3ff9997921d077c81a13d213c96 
+github token
 
-acc4584fef7b17dd2f0c383cf41126d4 gist ID
+acc4584fef7b17dd2f0c383cf41126d4 
+gist ID
 
 https://fancyapps.com/fancybox/3/
 
