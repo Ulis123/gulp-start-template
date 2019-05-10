@@ -33,11 +33,3 @@ https://tpverstak.ru/flex-cheatsheet/
 http://flexboxfroggy.com/#ru
 
 https://codepen.io/migo_userlife/pen/vZxMVM
-
-Fira Code, 'Courier New', monospace
-CSS Peek
-Debugger for Chrome
-PHP Debug
-PHP Extension Pack
-PHP IntelliSense
-Prettier Now
