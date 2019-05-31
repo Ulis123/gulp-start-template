@@ -35,3 +35,6 @@ http://flexboxfroggy.com/#ru
 https://codepen.io/migo_userlife/pen/vZxMVM
 
 http://underscores.me/
+
+2fe5de9fc2ecbef82668efff251a98ccc816436a     gist token for sinc my vs code
+c823068a3cb617558c92794a747465e4             gist id
