@@ -91,9 +91,7 @@ const styles = () => gulp.src(paths.styles.src)
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass())
-    .pipe(autoprefixer({
-        browsers: ["last 12 versions", "> 1%", "ie 8", "ie 7"]
-    }))
+    .pipe(autoprefixer())
     .pipe(csso())
     .pipe(rename({
         suffix: ".min"
