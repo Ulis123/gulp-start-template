@@ -28,3 +28,5 @@ http://flexboxfroggy.com/#ru
 https://codepen.io/migo_userlife/pen/vZxMVM
 
 http://underscores.me/
+
+https://wordpress.stackexchange.com/questions/169831/custom-single-template-for-a-specific-category
