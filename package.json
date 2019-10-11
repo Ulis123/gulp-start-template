@@ -39,7 +39,6 @@
   "browserslist": [
     "last 12 versions",
     "> 1%",
-    "ie 8",
-    "ie 7"
+    "ie 8"
   ]
 }
