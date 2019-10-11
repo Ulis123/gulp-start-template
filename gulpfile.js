@@ -2,13 +2,10 @@ const gulp = require('gulp');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const browsersync = require('browser-sync').create();
-const htmlmin = require('gulp-htmlmin');
-const rigger = require('gulp-rigger');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const csso = require('gulp-csso');
 const plumber = require('gulp-plumber');
-const debug = require('gulp-debug');
 const sourcemaps = require('gulp-sourcemaps');
 const rename = require('gulp-rename');
 const newer = require('gulp-newer');
@@ -70,21 +67,11 @@ const server = () => {
 };
 
 const serverConfig = () => gulp.src(paths.server_config.src)
-    .pipe(gulp.dest(paths.server_config.dist))
-    .pipe(debug({
-        "title": "Server config"
-    }));
+    .pipe(gulp.dest(paths.server_config.dist));
 
 const html = () => gulp.src(paths.html.src)
-    .pipe(rigger())
     .pipe(plumber())
-    .pipe(htmlmin({
-        collapseWhitespace: true
-    }))
     .pipe(gulp.dest(paths.html.dist))
-    .pipe(debug({
-        "title": "HTML files"
-    }))
     .on("end", browsersync.reload);
 
 const styles = () => gulp.src(paths.styles.src)
@@ -98,9 +85,6 @@ const styles = () => gulp.src(paths.styles.src)
     }))
     .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest(paths.styles.dist))
-    .pipe(debug({
-        "title": "CSS files"
-    }))
     .pipe(browsersync.stream());
 
 const scripts = () => gulp.src(paths.scripts.src)
@@ -113,11 +97,8 @@ const scripts = () => gulp.src(paths.scripts.src)
     .pipe(rename({
         suffix: ".min"
     }))
-    .pipe(sourcemaps.write(paths.scripts.dist))
+    .pipe(sourcemaps.write("./maps/"))
     .pipe(gulp.dest(paths.scripts.dist))
-    .pipe(debug({
-        "title": "JS files"
-    }))
     .on("end", browsersync.reload);
 
 const images = () => gulp.src(paths.images.src)
@@ -173,16 +154,10 @@ const images = () => gulp.src(paths.images.src)
         })
     ]))
     .pipe(gulp.dest(paths.images.dist))
-    .pipe(debug({
-        "title": "Images"
-    }))
     .on("end", browsersync.reload);
 
 const fonts = () => gulp.src(paths.fonts.src)
-    .pipe(gulp.dest(paths.fonts.dist))
-    .pipe(debug({
-        "title": "Fonts"
-    }));
+    .pipe(gulp.dest(paths.fonts.dist));
 
 
 gulp.task("watch", function () {
